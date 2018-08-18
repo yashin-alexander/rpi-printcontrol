@@ -1,0 +1,39 @@
+syntax = "proto3";
+
+service PrintControl {
+  rpc print_test_page (PrintTestFileRequest) returns (DefaultResponse) {}
+  rpc print_file (PrintFileRequest) returns (DefaultResponse) {}
+  rpc get_uploaded_files (GetUploadedFilesRequest) returns (UploadedFilesInfo) {}
+  rpc upload_file (UploadUnit) returns (DefaultResponse) {}
+  rpc remove_file (RemoveFileRequest) returns (DefaultResponse) {}
+  rpc remove_all_files (RemoveAllFilesRequest) returns (DefaultResponse) {}
+}
+
+message PrintTestFileRequest {}
+
+message PrintFileRequest {
+    string filename = 1;
+}
+
+message UploadUnit {
+    string filename = 1;
+    bytes content = 2;
+}
+
+message DefaultResponse {
+    bool status = 1;
+    string error = 2;
+}
+
+message RemoveFileRequest {
+    string filename = 1;
+}
+
+message GetUploadedFilesRequest {}
+
+message UploadedFilesInfo {
+    repeated string files = 1;
+    string error = 2;
+}
+
+message RemoveAllFilesRequest {}
