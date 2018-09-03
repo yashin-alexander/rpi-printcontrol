@@ -1,0 +1,23 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "rpi printer control application",
+  "main": "index.js",
+  "dependencies": {
+    "grpc-web": "^0.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yashin-alexander/rpi-printcontrol.git"
+  },
+  "author": "Alexander Yashin",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/yashin-alexander/rpi-printcontrol/issues"
+  },
+  "homepage": "https://github.com/yashin-alexander/rpi-printcontrol#readme"
+}
